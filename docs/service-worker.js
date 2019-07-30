@@ -19,16 +19,16 @@ const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  '../index.html',
-  '../js/app.js',
-  '../js/ble.js',
-  '../js/ec.js',
-  '../js/orp.js',
-  '../js/ph.js',
-  '../css/bulma-switch.min.css',
-  '../css/bulma-tooltip.min.css',
-  '../css/bulma.min.css',
-  '../css/spinner.css'
+  './index.html',
+  './js/app.js',
+  './js/ble.js',
+  './js/ec.js',
+  './js/orp.js',
+  './js/ph.js',
+  './css/bulma-switch.min.css',
+  './css/bulma-tooltip.min.css',
+  './css/bulma.min.css',
+  './css/spinner.css'
 ];
 
 // The install handler takes care of precaching the resources we always need.

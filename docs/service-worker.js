@@ -28,9 +28,7 @@ const PRECACHE_URLS = [
   '../css/bulma-switch.min.css',
   '../css/bulma-tooltip.min.css',
   '../css/bulma.min.css',
-  '../css/spinner.css',
-  'https://use.fontawesome.com/releases/v5.0.10/css/all.css',
-  'https://cdn.jsdelivr.net/npm/vue/dist/vue.js'
+  '../css/spinner.css'
 ];
 
 // The install handler takes care of precaching the resources we always need.

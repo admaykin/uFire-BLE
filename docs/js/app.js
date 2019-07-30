@@ -1,6 +1,5 @@
 let decoder = new TextDecoder("utf-8");
 let encoder = new TextEncoder("utf-8");
-let deferredPrompt;
 
 var app = new Vue({
   el: "#app",

@@ -39,3 +39,5 @@
   border-top-color: #09d;
   border-left-color: #09d;
 }
+
+[v-cloak] > * { display:none; }

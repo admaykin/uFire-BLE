@@ -11,7 +11,7 @@ var app = new Vue({
     ec: "-",
     ec_unit: "mS",
     temp: "-",
-    temp_unit: "-",
+    temp_unit: "°C",
     device_name: "",
     ec_connected: false,
     ph_connected: false,
@@ -49,7 +49,8 @@ var app = new Vue({
     measure: async function(event){
       characteristic = await service.getCharacteristic(this.rxUuid);
       if (this.ec_connected){
-        await characteristic.writeValue(encoder.encode("ec"));
+        await characteristic.writeValue(encoder.encode("ect"));
+        await characteristic.writeValue(encoder.encode("ec " + this.temp));
       }
 
       if (this.ph_connected)
@@ -62,9 +63,6 @@ var app = new Vue({
         await characteristic.writeValue(encoder.encode("o"));
       }
 
-      await characteristic.writeValue(encoder.encode("t"));
-      await new Promise(resolve => setTimeout(resolve, 10));
-      await characteristic.writeValue(encoder.encode("tu"));
     },
     value_update: async function(event) {
       let value = event.target.value;
@@ -88,8 +86,8 @@ var app = new Vue({
         this.ec_unit = obj.eu;
       }
       // temperature
-      if (obj.hasOwnProperty("t")) {
-        this.temp = obj.t;
+      if (obj.hasOwnProperty("ect")) {
+        this.temp = obj.ect;
       }
       // temperature unit
       if (obj.hasOwnProperty("tu")) {

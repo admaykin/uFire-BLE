@@ -32,7 +32,7 @@ var app = new Vue({
     ph_offset: "-",
     orp_offset: "-",
     orp: "-",
-    orp_unit: "Eh",
+    orp_unit: "mV",
     orp_potential: "-",
     switchConnected: false, 
     serviceUuid: "4805d2d0-af9f-42c1-b950-eae78304c408",
@@ -55,7 +55,7 @@ var app = new Vue({
 
       if (this.ph_connected)
       {
-        await characteristic.writeValue(encoder.encode("ph"));
+        await characteristic.writeValue(encoder.encode("ph " + this.temp));
       }
 
       if (this.orp_connected)

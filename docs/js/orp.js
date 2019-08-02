@@ -46,7 +46,9 @@ async function orp_set_potential() {
 async function orp_reset() {
     var response = confirm("Delete all configuration data?");
     if (response == true) {
+        await characteristic.writeValue(encoder.encode("op 0"));
         await characteristic.writeValue(encoder.encode("or"));
         await characteristic.writeValue(encoder.encode("oo"));
+        await characteristic.writeValue(encoder.encode("op"));
     }
 }

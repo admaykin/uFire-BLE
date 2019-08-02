@@ -56,7 +56,6 @@ function disconnect() {
   this.device_name = "";
   this.ec = "-";
   this.temp = "-";
-  this.temp_unit = "-";
   this.status = "not connected";
   this.ec_low_ref = "-";
   this.ec_low_read = "-";
@@ -68,7 +67,6 @@ function disconnect() {
   this.ec_connected = false;
   this.ph = "-";
   this.ph_connected = false;
-  this.ph_unit = "-";
   this.ph_low_ref = "-";
   this.ph_low_read = "-";
   this.ph_high_ref = "-";
@@ -78,6 +76,5 @@ function disconnect() {
   this.orp_offset = "-";
   this.orp_potential = "-";
   this.orp_connected = false;
-  this.orp_unit = "-";
   this.switchConnected = false;
 }

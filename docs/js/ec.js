@@ -106,4 +106,6 @@ async function ec_config() {
   await characteristic.writeValue(encoder.encode("elrf"));
   await new Promise(resolve => setTimeout(resolve, 10));
   await characteristic.writeValue(encoder.encode("elr"));
+  await new Promise(resolve => setTimeout(resolve, 10));
+  await characteristic.writeValue(encoder.encode("eo"));
 }
